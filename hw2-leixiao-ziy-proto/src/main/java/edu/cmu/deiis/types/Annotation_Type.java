@@ -13,7 +13,7 @@ import org.apache.uima.cas.impl.FeatureImpl;
 import org.apache.uima.cas.Feature;
 
 /** 
- * Updated by JCasGen Wed Sep 11 13:44:28 EDT 2013
+ * Updated by JCasGen Mon Sep 29 15:55:16 EDT 2014
  * @generated */
 public class Annotation_Type extends org.apache.uima.jcas.tcas.Annotation_Type {
   /** @generated */
@@ -44,24 +44,6 @@ public class Annotation_Type extends org.apache.uima.jcas.tcas.Annotation_Type {
   public final static boolean featOkTst = JCasRegistry.getFeatOkTst("edu.cmu.deiis.types.Annotation");
  
   /** @generated */
-  final Feature casFeat_casProcessorId;
-  /** @generated */
-  final int     casFeatCode_casProcessorId;
-  /** @generated */ 
-  public String getCasProcessorId(int addr) {
-        if (featOkTst && casFeat_casProcessorId == null)
-      jcas.throwFeatMissing("casProcessorId", "edu.cmu.deiis.types.Annotation");
-    return ll_cas.ll_getStringValue(addr, casFeatCode_casProcessorId);
-  }
-  /** @generated */    
-  public void setCasProcessorId(int addr, String v) {
-        if (featOkTst && casFeat_casProcessorId == null)
-      jcas.throwFeatMissing("casProcessorId", "edu.cmu.deiis.types.Annotation");
-    ll_cas.ll_setStringValue(addr, casFeatCode_casProcessorId, v);}
-    
-  
- 
-  /** @generated */
   final Feature casFeat_confidence;
   /** @generated */
   final int     casFeatCode_confidence;
@@ -86,10 +68,6 @@ public class Annotation_Type extends org.apache.uima.jcas.tcas.Annotation_Type {
   public Annotation_Type(JCas jcas, Type casType) {
     super(jcas, casType);
     casImpl.getFSClassRegistry().addGeneratorForType((TypeImpl)this.casType, getFSGenerator());
-
- 
-    casFeat_casProcessorId = jcas.getRequiredFeatureDE(casType, "casProcessorId", "uima.cas.String", featOkTst);
-    casFeatCode_casProcessorId  = (null == casFeat_casProcessorId) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_casProcessorId).getCode();
 
  
     casFeat_confidence = jcas.getRequiredFeatureDE(casType, "confidence", "uima.cas.Double", featOkTst);
